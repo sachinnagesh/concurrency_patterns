@@ -28,7 +28,9 @@ func ChannelCall() {
 
 	go func() { //anonymous func
 		fmt.Println("in anonymous go routine")
+		fmt.Println("putting anonymous")
 		mychannel <- "anonymous" //puts value in channel
+		fmt.Println("putting data2")
 		mychannel <- "data2"
 	}()
 
